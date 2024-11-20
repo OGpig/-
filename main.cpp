@@ -427,31 +427,7 @@ void init()
 	 painter->addMesh(skybox6, "skybox6", "./assets/_skybox_10.jpg", vshader, fshader, 1, glm::mat4(1.0f));
 	 meshList.push_back(skybox6);
 	 
-	 ////圆柱
-	 //TriMesh* Cylinder = new TriMesh();
-	 //Cylinder->generateCylinder(10, 1, 1);
-	 //Cylinder->setTranslation(glm::vec3(0.0, 1.0, -1.0));
-	 //Cylinder->setRotation(glm::vec3(-90.0f, 0.0f, 0.0f));
-	 //Cylinder->setScale(glm::vec3(1.0f, 1.0f, 1.0f));
-	 //painter->addMesh(Cylinder, "Cylinder", "./assets/cylinder10.jpg", vshader, fshader, 1, glm::mat4(1.0f));
-	 //meshList.push_back(Cylinder);
-	 ////盘子
-	 //TriMesh* disk = new TriMesh();
-	 //disk->generateDisk(10, 1);
-	 //disk->setTranslation(glm::vec3(0.0, 1.0, 0.0));
-	 //disk->setRotation(glm::vec3(-90.0f, 0.0f, 0.0f));
-	 //disk->setScale(glm::vec3(1.0f, 1.0f, 1.0f));
-	 //
-	 //painter->addMesh(disk, "disk", "./assets/disk.jpg", vshader, fshader, 1, glm::mat4(1.0f));
-	 //meshList.push_back(disk);
-	 ////圆锥
-	 //TriMesh* Cone = new TriMesh();
-	 //Cone->generateCone(10, 1,1);
-	 //Cone->setTranslation(glm::vec3(0.0, 1.0, 1.0));
-	 //Cone->setRotation(glm::vec3(-90.0f, 0.0f, 0.0f));
-	 //Cone->setScale(glm::vec3(1.0f, 1.0f, 1.0f));
-	 //painter->addMesh(Cone, "Cone", "./assets/cone.jpg", vshader, fshader, 1, glm::mat4(1.0f));
-	 //meshList.push_back(Cone);
+
 
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -461,12 +437,13 @@ void init()
 //背景跟随相机
 void fix_backgroud()
 {
-	painter->replaceMesh1(skybox1, "skybox1", "./assets/skybox/mars_negx.jpg", vshader, fshader, 1,glm::mat4(1.0f));
-	painter->replaceMesh1(skybox2, "skybox2", "./assets/skybox/mars_posx.jpg", vshader, fshader, 1, glm::mat4(1.0f));
-	painter->replaceMesh1(skybox3, "skybox3", "./assets/skybox/mars_negz.jpg", vshader, fshader, 1, glm::mat4(1.0f));
 	painter->replaceMesh1(skybox4, "skybox4", "./assets/skybox/mars_posz.jpg", vshader, fshader, 1, glm::mat4(1.0f));
 	painter->replaceMesh1(skybox5, "skybox5", "./assets/skybox/mars_posy.jpg", vshader, fshader, 1, glm::mat4(1.0f));
 	painter->replaceMesh1(skybox6, "skybox6", "./assets/skybox/mars_negy.jpg", vshader, fshader, 1, glm::mat4(1.0f));
+	
+	painter->replaceMesh1(skybox1, "skybox1", "./assets/skybox/mars_negx.jpg", vshader, fshader, 1,glm::mat4(1.0f));
+	painter->replaceMesh1(skybox2, "skybox2", "./assets/skybox/mars_posx.jpg", vshader, fshader, 1, glm::mat4(1.0f));
+	painter->replaceMesh1(skybox3, "skybox3", "./assets/skybox/mars_negz.jpg", vshader, fshader, 1, glm::mat4(1.0f));
 }
 void update_steve()
 {
